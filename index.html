@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Converter</title>
 </head>
 <body>
-    
+   <div class="container">
+    <h2>Currency Converter</h2>
+    <form>
+        <div class="amount">
+            <h2>Enter Amount</h2>
+            <input type="text" id="amount" placeholder="Enter Amount">
+        </div>
+        <div class="dropdown">
+            <div class="from">
+                <h2>FROM</h2>
+                <div class="select-cont">
+                    <img src="https://flagsapi.com/AR/flat/64.png">
+                    <select name="from"></select>
+                </div>
+            </div>
+            <div class="to">
+                <h2>TO</h2>
+                <div class="select-cont">
+                    <img src="https://flagsapi.com/IN/flat/64.png">
+                    <select name="to"></select>
+                </div>
+            </div>
+        </div>
+        <div class="msg">Enter Message</div>
+        <button>EXCHANGE</button>
+    </form>
+   </div>
 </body>
 </html>
