@@ -71,12 +71,12 @@ form input{
 .select-cont select{
     width: 100%; /* Let it fill remaining space */
     margin:0;
-  
+    height: 2rem;
     margin-left: 0.1rem;
    border: none;
     font-size: 1rem;
     background-color: #023e8a;
-    height: 100%;
+    
    
 }
 
