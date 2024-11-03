@@ -1,5 +1,5 @@
 
-const url =  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+const url =  "https://latest.currency-api.pages.dev/v1/currencies/";
 const dropdown=document.querySelectorAll(".dropdown select");
 const btn=document.querySelector("button");
 const fromcurr=document.querySelector(".from select");
@@ -31,17 +31,26 @@ const updateFlag=(e)=>{
 };
 
 const exchange=async()=>{
-  const URL = `${url}/${fromcurr.value.toLowerCase()}/${tocurr.value.toLowerCase()}.json`;
+  const URL = `${url}/${fromcurr.value.toLowerCase()}.json`;
   let response = await fetch(URL);
+  console.log("fetching done");
   let data = await response.json();
-  let rate = data[tocurr.value.toLowerCase()];
+  console.log(data);
+  console.log(tocurr.value.toLowerCase());
+  console.log("fetching2 done");
+  let rate = data[fromcurr.value.toLowerCase()][tocurr.value.toLowerCase()];
   
+  
+  console.log(rate);
+  
+ 
+  let amount = document.querySelector(".amount input").value;
+  let total = rate * amount;
+  console.log(total);
+  msg.innerText = `${amount} ${fromcurr.value} = ${total} ${tocurr.value}`;
 };
 
 btn.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  exchange();
-});
-window.addEventListener("load", () => {
+  
   exchange();
 });
