@@ -39,11 +39,7 @@ const exchange=async()=>{
   console.log(tocurr.value.toLowerCase());
   console.log("fetching2 done");
   let rate = data[fromcurr.value.toLowerCase()][tocurr.value.toLowerCase()];
-  
-  
   console.log(rate);
-  
- 
   let amount = document.querySelector(".amount input").value;
   let total = rate * amount;
   console.log(total);
